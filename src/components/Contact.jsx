@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, MapPin } from "lucide-react";
-import { EMAIL_HREF, GITHUB_URL, LINKEDIN_URL, PROFILE } from "../data/constants";
+import {
+  EMAIL_HREF,
+  GITHUB_URL,
+  LINKEDIN_URL,
+  PROFILE,
+} from "../data/constants";
 
 export default function Contact() {
   return (
@@ -18,10 +23,14 @@ export default function Contact() {
             className="absolute left-1/2 top-0 h-[240px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-signal-blue/20 blur-[110px]"
           />
 
-          <span className="relative font-mono text-xs text-signal-cyan/70">07</span>
+          <span className="relative font-mono text-xs text-signal-cyan/70">
+            07
+          </span>
+
           <h2 className="relative mt-3 font-display text-3xl font-semibold text-mist-100 text-balance sm:text-4xl">
             Let's Build Something
           </h2>
+
           <p className="relative mx-auto mt-4 max-w-md text-sm leading-relaxed text-mist-500 sm:text-base">
             I'm currently open to opportunities in frontend development,
             React.js development and junior software development.
@@ -35,10 +44,11 @@ export default function Contact() {
               <Mail size={16} />
               Get In Touch
             </a>
+
             <a
               href={LINKEDIN_URL}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg border border-white/12 px-6 py-3 text-sm font-medium text-mist-100 transition-colors hover:border-signal-cyan/50 hover:text-signal-cyan"
             >
               <Linkedin size={16} />
@@ -51,16 +61,24 @@ export default function Contact() {
               <MapPin size={15} className="text-signal-cyan" />
               {PROFILE.location}
             </span>
-            <a href={EMAIL_HREF} className="hover:text-signal-cyan">
+
+            <a
+              href={EMAIL_HREF}
+              className="transition-colors hover:text-signal-cyan"
+            >
               {PROFILE.email}
             </a>
-            <span
-              className="inline-flex items-center gap-2 opacity-50"
-              title="GitHub profile coming soon"
+
+            <a
+              href={GITHUB_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 transition-colors hover:text-signal-cyan"
+              aria-label="Visit Shaheer Ahmed's GitHub profile"
             >
               <Github size={15} />
-              GitHub — coming soon
-            </span>
+              GitHub
+            </a>
           </div>
         </motion.div>
       </div>
