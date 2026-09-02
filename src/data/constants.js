@@ -12,7 +12,7 @@ export const LINKEDIN_URL =
   "https://www.linkedin.com/in/shaheer-ahmed-737423365";
 
 // TODO: replace with your real GitHub profile URL once available.
-export const GITHUB_URL = "#";
+export const GITHUB_URL = "https://github.com/Shaheer1786/Shaheer-Ahmed-Projects.git";
 
 export const EMAIL_HREF = `mailto:${PROFILE.email}`;
 
